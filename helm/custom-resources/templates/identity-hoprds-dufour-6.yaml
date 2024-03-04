@@ -2,7 +2,7 @@
 apiVersion: hoprnet.org/v1alpha2
 kind: IdentityHoprd
 metadata:
-  name: pull-requests-dufour-1
+  name: pull-requests-dufour-6
   namespace: core-team
 spec:
   identityPoolName: pull-requests-dufour
