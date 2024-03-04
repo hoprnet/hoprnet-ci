@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: github-runners-deploy-hoprd-nodes
+rules:
+- apiGroups:
+    - apps
+    - extensions
+  resources:
+    - deployments
+  verbs:
+    - get
+    - list
+    - watch
+    - create
+    - delete
+    - patch
+    - update
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: github-runners-deploy-hoprd-nodes
+  namespace: core-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: github-runners-deploy-hoprd-nodes
+subjects:
+- kind: ServiceAccount
+  name: github-runners-sa
+  namespace: github-runners

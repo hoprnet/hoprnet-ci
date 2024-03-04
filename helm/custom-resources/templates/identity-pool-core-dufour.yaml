@@ -1,0 +1,13 @@
+---
+apiVersion: hoprnet.org/v1alpha2
+kind: IdentityPool
+metadata:
+  name: core-dufour
+  namespace: dufour
+spec:
+  network: dufour
+  secretName: wallet-core
+  minReadyIdentities: 0
+  funding:
+    schedule: 15 8 * * 1  # Every Monday at 8:15 UTC
+    nativeAmount: "1" # xDai

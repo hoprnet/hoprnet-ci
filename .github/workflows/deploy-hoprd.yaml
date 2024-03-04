@@ -1,0 +1,23 @@
+---
+name: Merge ClusterHoprd deployments
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - labeled
+jobs:
+  merge_deployments:
+    runs-on: ubuntu-2-core
+    if: contains(github.event.pull_request.labels.*.name, 'deploy_nodes')
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Merge PR
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          pull-request-number: ${{ github.event.pull_request.number }}

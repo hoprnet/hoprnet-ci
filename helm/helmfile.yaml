@@ -12,6 +12,9 @@ repositories:
    url: europe-west3-docker.pkg.dev/hoprassociation/helm-charts
    oci: true
 releases:
+- name: core-nodes-custom-resources
+  namespace: core-team
+  chart: ./custom-resources
 - name: hoprd-core-rotsee
   namespace: core-team
   chart: hoprassociation/cluster-hoprd
