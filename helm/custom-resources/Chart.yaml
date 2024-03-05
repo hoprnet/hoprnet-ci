@@ -1,6 +1,0 @@
-apiVersion: v2
-name: custom-resources-hoprd-core-nodes
-description: Custom resources Hoprd Core Nodes
-type: application
-version: 0.1.1
-
