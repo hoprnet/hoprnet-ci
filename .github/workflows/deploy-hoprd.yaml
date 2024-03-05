@@ -9,7 +9,7 @@ on:
       - labeled
 jobs:
   merge_deployments:
-    runs-on: ubuntu-2-core
+    runs-on: self-hosted-hoprnet-small
     if: contains(github.event.pull_request.labels.*.name, 'deploy_nodes')
 
     steps:
