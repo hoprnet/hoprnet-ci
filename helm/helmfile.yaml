@@ -15,6 +15,9 @@ releases:
 - name: core-nodes-custom-resources
   namespace: core-team
   chart: ./custom-resources
+- name: core-nodes-pull-requests
+  namespace: core-team
+  chart: ./pull-requests
 - name: hoprd-core-rotsee
   namespace: core-team
   chart: hoprassociation/cluster-hoprd
