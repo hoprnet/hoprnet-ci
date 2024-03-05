@@ -3,7 +3,7 @@ apiVersion: hoprnet.org/v1alpha2
 kind: IdentityPool
 metadata:
   name: core-dufour
-  namespace: dufour
+  namespace: core-team
 spec:
   network: dufour
   secretName: wallet-core
