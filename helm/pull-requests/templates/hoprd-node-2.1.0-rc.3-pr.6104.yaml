@@ -12,6 +12,14 @@ spec:
   version: 2.1.0-rc.3-pr.6104
   supportedRelease: saint-louis
   enabled: true
+  deployment:
+    env: |
+      - name: RUST_BACKTRACE
+        value: full
+      - name: RUST_LOG
+        value: debug
+      - name: OPENTELEMETRY_COLLECTOR_URL
+        value: http://tempo-distributor.monitoring.svc:4318
   config: |
     hopr:
       chain:
