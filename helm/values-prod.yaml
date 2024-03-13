@@ -1,0 +1,13 @@
+---
+ci:
+  enabled: false
+github-runners:
+  enabled: true
+pull-requests:
+  enabled: false
+team:
+  enabled: false
+rotsee:
+  enabled: false
+dufour:
+  enabled: false
