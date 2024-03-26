@@ -18,7 +18,7 @@ spec:
         value: full
       - name: RUST_LOG
         value: debug
-      - name: OPENTELEMETRY_COLLECTOR_URL
+      - name: HOPRD_OPENTELEMETRY_COLLECTOR_URL
         value: http://tempo-distributor.monitoring.svc:4318
   config: |
     hopr:
