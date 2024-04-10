@@ -1,0 +1,19 @@
+---
+apiVersion: hoprnet.org/v1alpha2
+kind: ClusterHoprd
+metadata:
+  name: hoprd-node-2-1-0-rc-3-pr-6115
+  labels:
+    hoprds.hoprnet.org/pullRequest: "2.1.0-rc.3-pr.6115"
+  namespace:  core-team
+spec:
+  identityPoolName: pull-requests-rotsee
+  replicas: 1
+  version: 2.1.0-rc.3-pr.6115
+  supportedRelease: saint-louis
+  enabled: true
+  config: |
+    hopr:
+      chain:
+        network: rotsee
+        provider: https://gnosis-chain.rpc.rank1.co
