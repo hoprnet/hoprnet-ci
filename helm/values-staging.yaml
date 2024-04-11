@@ -1,8 +1,6 @@
 ---
 ci:
   enabled: true
-github-runners:
-  enabled: false
 pull-requests:
   enabled: true
 team:

@@ -7,14 +7,6 @@ environments:
       - values-staging.yaml
     secrets:
       - secrets.sops.yaml
-  prod:
-    values:
-      - values-common.yaml
-      - values-rotsee.yaml
-      - values-dufour.yaml
-      - values-prod.yaml
-    secrets:
-      - secrets.sops.yaml
 ---
 repositories:
  - name: hoprassociation
@@ -25,12 +17,6 @@ releases:
   namespace: core-team
   condition: ci.enabled
   chart: ./ci
-  values:
-    - values-{{ .Environment.Name }}.yaml
-- name: github-runners
-  namespace: core-team
-  condition: github-runners.enabled
-  chart: ./github-runners
   values:
     - values-{{ .Environment.Name }}.yaml
 - name: core-nodes-pull-requests
