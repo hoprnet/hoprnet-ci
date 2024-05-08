@@ -35,7 +35,7 @@ releases:
   namespace: core-team
   condition: rotsee.enabled
   chart: hoprassociation/cluster-hoprd
-  version: 0.3.0
+  version: 0.3.1
   wait: true
   timeout: 5
   values:
@@ -48,7 +48,7 @@ releases:
   namespace: core-team
   condition: dufour.enabled
   chart: hoprassociation/cluster-hoprd
-  version: 0.3.0
+  version: 0.3.1
   wait: true
   timeout: 5
   values:
