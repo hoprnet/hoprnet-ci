@@ -7,4 +7,3 @@ metadata:
 spec:
   network: rotsee
   secretName: hoprd-core-rotsee-wallet
-  minReadyIdentities: 0

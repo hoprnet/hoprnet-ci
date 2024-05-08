@@ -7,4 +7,3 @@ metadata:
 spec:
   network: dufour
   secretName: hoprd-core-dufour-wallet
-  minReadyIdentities: 0
