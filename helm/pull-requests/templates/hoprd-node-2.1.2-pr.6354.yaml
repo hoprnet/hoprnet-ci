@@ -16,27 +16,5 @@ spec:
     hopr:
       chain:
         network: dufour
-        provider: https://gnosis-chain.rpc.rank1.co
-        strategy:
-          on_fail_continue: true
-          allow_recursive: false
-          finalize_channel_closure: true
-          strategies:
-            - !Promiscuous
-              max_channels: 10
-              network_quality_threshold: 0.5
-              new_channel_stake: "1000000 HOPR"
-              minimum_node_balance: "10000000 HOPR"
-              min_network_size_samples: 20
-              enforce_max_channels: true
-              minimum_peer_version: ">=2.0.0"
-            - !AutoFunding
-              funding_amount: "1000000 HOPR"
-              min_stake_threshold: "100000 HOPR"
-            - !Aggregating
-              aggregation_threshold: 100000
-              unrealized_balance_ratio: 0.9
-              aggregation_timeout: 60
-              aggregate_on_channel_close: true
-            - !AutoRedeeming
-              redeem_only_aggregated: True
+        provider: http://gnosis-rpc-provider.rpc-provider.svc.cluster.local:8545
+
