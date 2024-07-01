@@ -7,7 +7,7 @@ metadata:
     hoprds.hoprnet.org/pullRequest: "2.1.2-pr.6354"
   namespace:  core-team
 spec:
-  identityPoolName: pull-requests-rotsee
+  identityPoolName: pull-requests-dufour
   replicas: 1
   version: 2.1.2-pr.6354
   supportedRelease: saint-louis
