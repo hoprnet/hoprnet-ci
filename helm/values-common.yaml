@@ -1,11 +1,4 @@
 deployment:
-  resources: |
-    limits:
-      cpu: 2000m
-      memory: 1Gi
-    requests:
-      cpu: 2000m
-      memory: 1Gi
   startupProbe: |
     failureThreshold: 800
     httpGet:
