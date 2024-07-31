@@ -15,7 +15,7 @@ config: |
   hopr:
     chain:
       network: dufour
-      provider: https://gnosis.rpc-provider.staging.hoprnet.link
+      provider: https://gnosis.rpc-provider.prod.hoprnet.link
     strategy:
       on_fail_continue: true
       allow_recursive: false
