@@ -31,7 +31,7 @@ config: |
         - !AutoRedeeming
           redeem_only_aggregated: true
           on_close_redeem_single_tickets_value_min: "2000000000000000000 HOPR"
-          minimum_redeem_ticket_value: "1500000 HOPR"
+          minimum_redeem_ticket_value: "3000000 HOPR"
         - !ClosureFinalizer
           max_closure_overdue: 3600
 
