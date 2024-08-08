@@ -34,6 +34,10 @@ config: |
         - !ClosureFinalizer
           max_closure_overdue: 3600
 
+identityPool:
+  funding:
+    enabled: true
+    schedule: 45 8 * * 1
 
 identities:
   hoprd-core-rotsee-1:
