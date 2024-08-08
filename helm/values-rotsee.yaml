@@ -19,7 +19,21 @@ config: |
     strategy:
       on_fail_continue: true
       allow_recursive: false
-      strategies: []
+      strategies:
+        - !AutoFunding
+          funding_amount: "1000000 HOPR"
+          min_stake_threshold: "100000 HOPR"
+        - !Aggregating
+          aggregation_threshold: 15000
+          unrealized_balance_ratio: 0.95
+          aggregation_timeout: 60
+          aggregate_on_channel_close: true
+        - !AutoRedeeming
+          redeem_only_aggregated: true
+          on_close_redeem_single_tickets_value_min: "1500000 HOPR"
+        - !ClosureFinalizer
+          max_closure_overdue: 3600
+
 
 identities:
   hoprd-core-rotsee-1:
