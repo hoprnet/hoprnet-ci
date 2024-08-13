@@ -19,7 +19,7 @@ for channel_id in "${channels[@]}"; do
   sleep 2
 
   #echo "Redeeming tickets for channel ${channel_id}"
-  curl -X 'POST' "${HOPRD_API_URL}/channels/${channel_id}/tickets/redeem" -H 'accept: */*' -H "X-Auth-Token: ${HOPRD_API_TOKEN}" -d ''
-  sleep 5
+  #curl -X 'POST' "${HOPRD_API_URL}/channels/${channel_id}/tickets/redeem" -H 'accept: */*' -H "X-Auth-Token: ${HOPRD_API_TOKEN}" -d ''
+  #sleep 5
 
 done
