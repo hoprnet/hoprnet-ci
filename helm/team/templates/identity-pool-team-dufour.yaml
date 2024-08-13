@@ -1,9 +1,0 @@
----
-apiVersion: hoprnet.org/v1alpha2
-kind: IdentityPool
-metadata:
-  name: team-dufour
-  namespace: core-team
-spec:
-  network: dufour
-  secretName: hoprd-core-dufour-wallet

@@ -1,6 +1,0 @@
-apiVersion: v2
-name: team-nodes
-description: Team Hoprd Core Nodes
-type: application
-version: 0.1.1
-
