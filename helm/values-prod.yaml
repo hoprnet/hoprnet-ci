@@ -1,3 +1,9 @@
+---
+ci:
+  enabled: false
+pull-requests:
+  enabled: false
+
 replicas: 5
 network: dufour
 version: saint-louis-latest
@@ -52,4 +58,5 @@ identities:
     nativeAddress: "0xf7f1f61f8c39b3034e294887e76c6b1ccee2f9e1"
     safeAddress: "0x7C8B6c46bc4F405B343B8Af753a3C3edB387F6b3"
     moduleAddress: "0x27FcB5d6df51fC067fC2FbC1155bC0C70dE77c35"
+
 

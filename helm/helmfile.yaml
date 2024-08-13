@@ -2,9 +2,13 @@ environments:
   staging:
     values:
       - values-common.yaml
-      - values-rotsee.yaml
-      - values-dufour.yaml
       - values-staging.yaml
+    secrets:
+      - secrets.sops.yaml
+  prod:
+    values:
+      - values-common.yaml
+      - values-prod.yaml
     secrets:
       - secrets.sops.yaml
 ---
@@ -25,36 +29,14 @@ releases:
   chart: ./pull-requests
   values:
     - values-{{ .Environment.Name }}.yaml
-- name: core-nodes-team
+- name: core-node
   namespace: core-team
-  condition: team.enabled
-  chart: ./team
-  values:
-    - values-{{ .Environment.Name }}.yaml
-- name: hoprd-core-rotsee
-  namespace: core-team
-  condition: rotsee.enabled
   chart: hoprassociation/cluster-hoprd
   version: 0.3.1
   wait: true
   timeout: 5
   values:
     - values-common.yaml
-    - values-rotsee.yaml
     - values-{{ .Environment.Name }}.yaml
   secrets:
     - secrets.sops.yaml
-- name: hoprd-core-dufour
-  namespace: core-team
-  condition: dufour.enabled
-  chart: hoprassociation/cluster-hoprd
-  version: 0.3.1
-  wait: true
-  timeout: 5
-  values:
-    - values-common.yaml
-    - values-dufour.yaml
-    - values-{{ .Environment.Name }}.yaml
-  secrets:
-    - secrets.sops.yaml
-
