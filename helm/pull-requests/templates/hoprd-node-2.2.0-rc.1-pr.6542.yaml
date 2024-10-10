@@ -9,7 +9,7 @@ metadata:
 spec:
   identityPoolName: pull-requests-rotsee
   replicas: 1
-  version: 2.2.0-rc.1-pr.6542
+  version: 2.2.0-rc.1-pr.6542-debug
   supportedRelease: saint-louis
   enabled: true
   config: |
@@ -17,3 +17,13 @@ spec:
       chain:
         network: rotsee
         provider: https://gnosis.rpc-provider.prod.hoprnet.link
+  deployment:
+    env:
+      - name: DEBUG
+        value: hopr*
+      - name: RUST_LOG
+        value: info
+      - name: HOPR_LOG_FORMAT
+        value: json
+      - name: RUST_BACKTRACE
+        value: full
