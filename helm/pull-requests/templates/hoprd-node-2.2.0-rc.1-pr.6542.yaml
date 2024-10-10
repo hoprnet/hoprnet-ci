@@ -18,7 +18,7 @@ spec:
         network: rotsee
         provider: https://gnosis.rpc-provider.prod.hoprnet.link
   deployment:
-    env:
+    env: |
       - name: DEBUG
         value: hopr*
       - name: RUST_LOG
