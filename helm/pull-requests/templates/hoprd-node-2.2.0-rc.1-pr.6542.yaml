@@ -23,7 +23,7 @@ spec:
         value: hopr*
       - name: RUST_LOG
         value: info
-      - name: HOPR_LOG_FORMAT
+      - name: HOPRD_LOG_FORMAT
         value: json
       - name: RUST_BACKTRACE
         value: full
