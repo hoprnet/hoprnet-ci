@@ -6,4 +6,4 @@ metadata:
   namespace: core-team
 spec:
   network: dufour
-  secretName: hoprd-core-dufour-wallet
+  secretName: core-node-wallet

@@ -6,4 +6,5 @@ metadata:
   namespace: core-team
 spec:
   network: rotsee
-  secretName: hoprd-core-rotsee-wallet
+  secretName: core-node-wallet
+
