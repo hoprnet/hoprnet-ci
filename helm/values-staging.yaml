@@ -6,7 +6,7 @@ pull-requests:
 
 replicas: 5
 network: rotsee
-version: singapore-latest
+version: 2.2.0-rc.1-pr.6570 # singapore-latest
 
 deployment:
   resources: |
@@ -44,6 +44,10 @@ config: |
           minimum_redeem_ticket_value: "3000000 HOPR"
         - !ClosureFinalizer
           max_closure_overdue: 3600
+    protocol:
+      # Outgoing ticket winning probability.
+      # Should not be lower than the minimum ticket winning probability set on-chain
+      outgoing_ticket_winning_prob: 1.0  # 0.00001
 
 identityPool:
   funding:
