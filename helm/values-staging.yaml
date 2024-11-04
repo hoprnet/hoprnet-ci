@@ -6,7 +6,7 @@ pull-requests:
 
 replicas: 5
 network: rotsee
-version: 2.2.0-rc.1-pr.6570 # singapore-latest
+version: singapore-latest
 
 deployment:
   resources: |
@@ -37,8 +37,8 @@ config: |
           aggregation_timeout: 60
           aggregate_on_channel_close: true
         - !AutoRedeeming
-          redeem_only_aggregated: true
-          on_close_redeem_single_tickets_value_min: "2000000000000000000 HOPR"
+          redeem_only_aggregated: false
+          on_close_redeem_single_tickets_value_min: "90000000000000000 HOPR"
           # Load Testing parameters. Ticket price is 100 One node is sending messages to 4 different releayers (channels).
           # 200 msg/sec * 60 sec/min * 10 min  * 100 ticket price / 4 channels = 3000000
           minimum_redeem_ticket_value: "3000000 HOPR"
@@ -47,7 +47,7 @@ config: |
     protocol:
       # Outgoing ticket winning probability.
       # Should not be lower than the minimum ticket winning probability set on-chain
-      outgoing_ticket_winning_prob: 1.0  # 0.00001
+      outgoing_ticket_winning_prob: 0.00001
 
 identityPool:
   funding:
