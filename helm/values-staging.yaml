@@ -6,7 +6,7 @@ pull-requests:
 
 replicas: 5
 network: rotsee
-version: singapore-latest
+version: 2.2.0-rc.1-pr.6604  # singapore-latest
 
 deployment:
   env: |
