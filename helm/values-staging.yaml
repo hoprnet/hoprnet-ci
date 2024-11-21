@@ -55,8 +55,8 @@ config: |
       # Outgoing ticket winning probability.
       # Should not be lower than the minimum ticket winning probability set on-chain
       outgoing_ticket_winning_prob: 0.00001
-    network_options:
-      ignore_timeframe: 1
+    # network_options:
+    #   ignore_timeframe: 1
 
 identityPool:
   funding:
