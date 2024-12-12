@@ -13,7 +13,7 @@ deployment:
     #   value: debug,libp2p_swarm=debug,libp2p_mplex=debug,multistream_select=debug,libp2p_tcp=debug,libp2p_dns=info,sea_orm=info,sqlx=info
   env: |
     - name: RUST_LOG
-      value: info
+      value: debug
     - name: RUST_BACKTRACE
       value: full
     - name: HOPRD_LOG_FORMAT
