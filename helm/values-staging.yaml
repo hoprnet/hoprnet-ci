@@ -20,8 +20,8 @@ deployment:
       value: json
   resources: |
     limits:
-      cpu: 2000m
-      memory: 2Gi
+      cpu: 2000m # allow for max 2 core usage which is quite conservative
+      memory: 2Gi # use same memory allocation limit as requested
     requests:
       cpu: 2000m
       memory: 2Gi
