@@ -44,10 +44,19 @@ config: |
           minimum_redeem_ticket_value: "10000000000000 HOPR" # 0.00001 HOPR
         - !ClosureFinalizer
           max_closure_overdue: 3600
+    heartbeat:
+      interval: 60
+      variance: 2
+      threshold: 40
+      max_parallel_probes: 50
     protocol:
       # Outgoing ticket winning probability.
       # Should not be lower than the minimum ticket winning probability set on-chain
-      outgoing_ticket_winning_prob: 0.0005
+      # Not needed to be set anymore since v2.2.1
+      # outgoing_ticket_winning_prob: 0.0005
+      heartbeat:
+        # 5sec timeout for heartbeat pings, any more would be unusable anyway
+        timeout: 5
     # network_options:
     #   ignore_timeframe: 1
 

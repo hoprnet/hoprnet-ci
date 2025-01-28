@@ -51,10 +51,20 @@ config: |
           minimum_redeem_ticket_value: "10000000000000 HOPR" # 0.00001 HOPR
         - !ClosureFinalizer
           max_closure_overdue: 3600
+    # heartbeat configuration to ping each nodes within 2 minutes
+    heartbeat:
+      interval: 60
+      variance: 2
+      threshold: 40
+      max_parallel_probes: 50
     protocol:
       # Outgoing ticket winning probability.
       # Should not be lower than the minimum ticket winning probability set on-chain
-      outgoing_ticket_winning_prob: 0.0005
+      # Not needed to be set anymore since v2.2.1
+      # outgoing_ticket_winning_prob: 0.0005
+      heartbeat:
+        # 5sec timeout for heartbeat pings, any more would be unusable anyway
+        timeout: 5
 identities:
   core-node-1:
     identityFile: "eyJjcnlwdG8iOnsiY2lwaGVyIjoiYWVzLTEyOC1jdHIiLCJjaXBoZXJwYXJhbXMiOnsiaXYiOiJkYmI0MWNhNDg0NTI3MGNkZDVkYmE2MThlNDRmMzdlNCJ9LCJjaXBoZXJ0ZXh0IjoiYzU4YzhlMGYzZjk2NTQ0NWJlNTBlZTM3NjFmYWNhYjI5NTRjY2ZiMTllNmRiNzhkZWUzMzM1YmJiNWI5YmI4M2I0NTBkZTk3OTAxZGY4ZDVkOGUzNGVlYWQyOTI1M2JiYThhNzkyYTYwNjk4MWVlODM5ODk2YzhiMzFiMTE5MGNkYjE0YWZjMWZmZDBjNTc3YTg4NGJiMmFiOTBlY2QwNTAyMThkNGZjNTFmZGIwOTEwMzdhN2RjNmNlYzZhZDhmNDdlODU4OTM3YzZhNTY0YjhhMWE4ZjZlNjY0N2M1NmVhNTIxN2Q1NWE5ZmU4MjQzMmQ4YWM1MWRiNGYxODQyYzIwYzA2NTA5MDk5NzJjOGZjNGFiMjk1NDNhNTYxNGVkYTRkNWI2NTIxYmI2ZGUyYjY0OWY2MWU4M2VhYmUzOTVjNjJmNGFkYzg1MzJhZjRkMzAyMTBlYWIiLCJrZGYiOiJzY3J5cHQiLCJrZGZwYXJhbXMiOnsiZGtsZW4iOjMyLCJuIjo4MTkyLCJwIjoxLCJyIjo4LCJzYWx0IjoiYTk5ODllZTFjM2IxYzE5ZjI2MzgxMzgyNDNhMjNlNDIxMjBjODYwNGU2M2Y0OTYzMzNjZWVkODJiNjBlNDM5ZiJ9LCJtYWMiOiIxMzdhZjUwYjRiMjljNzQ3MWYzYzU3ZWU3ZjlkMmEwNDk5MmMzMDYxMjI4ZjQ5NWE5OTI2YmJiOTA5NmYwOWFkIn0sImlkIjoiOWFiMzFkNmYtMDIyNC00NmEyLWE0Y2EtMTEzY2JjOGI0YjJiIiwidmVyc2lvbiI6M30="
