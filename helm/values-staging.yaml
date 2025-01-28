@@ -6,7 +6,7 @@ pull-requests:
 
 replicas: 5
 network: rotsee
-version: singapore-latest
+version: 2.2.1-pr.6825
 
 deployment:
     # - name: RUST_LOG
