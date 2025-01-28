@@ -9,13 +9,29 @@ network: dufour
 version: singapore
 
 deployment:
+  env: |
+    - name: RUST_LOG
+      value: info
+    - name: RUST_BACKTRACE
+      value: full
+    - name: HOPRD_LOG_FORMAT
+      value: json
+    # the following values overwrite defaults which will be adapted in 2.2.1
+    - name: HOPR_INTERNAL_LIBP2P_MSG_ACK_MAX_TOTAL_STREAMS
+      value: 10240
+    - name: HOPR_INTERNAL_LIBP2P_YAMUX_MAX_NUM_STREAMS
+      value: 5120
+    - name: HOPR_INTERNAL_LIBP2P_MAX_NEGOTIATING_INBOUND_STREAM_COUNT
+      value: 512
+    - name: HOPR_INTERNAL_LIBP2P_SWARM_IDLE_TIMEOUT
+      value: 300
   resources: |
     limits:
-      cpu: 1000m
-      memory: 1Gi
+      cpu: 2000m # allow for max 2 core usage which is quite conservative
+      memory: 2Gi # use same memory allocation limit as requested
     requests:
-      cpu: 200m
-      memory: 250Mi
+      cpu: 2000m
+      memory: 2Gi
 
 config: |
   hopr:
