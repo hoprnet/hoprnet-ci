@@ -57,6 +57,7 @@ config: |
       variance: 2
       threshold: 40
       max_parallel_probes: 50
+    protocol:
       heartbeat:
         # 5sec timeout for heartbeat pings, any more would be unusable anyway
         timeout: 5
