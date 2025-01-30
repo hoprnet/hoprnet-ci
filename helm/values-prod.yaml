@@ -48,7 +48,7 @@ config: |
           aggregate_on_channel_close: true
         - !AutoRedeeming
           redeem_only_aggregated: true
-          minimum_redeem_ticket_value: "10000000000000 HOPR" # 0.00001 HOPR
+          minimum_redeem_ticket_value: "3000000000000000000 HOPR" # 3 wxHOPR
         - !ClosureFinalizer
           max_closure_overdue: 3600
     # heartbeat configuration to ping each nodes within 2 minutes
@@ -57,11 +57,6 @@ config: |
       variance: 2
       threshold: 40
       max_parallel_probes: 50
-    protocol:
-      # Outgoing ticket winning probability.
-      # Should not be lower than the minimum ticket winning probability set on-chain
-      # Not needed to be set anymore since v2.2.1
-      # outgoing_ticket_winning_prob: 0.0005
       heartbeat:
         # 5sec timeout for heartbeat pings, any more would be unusable anyway
         timeout: 5
