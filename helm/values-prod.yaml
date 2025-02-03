@@ -8,6 +8,9 @@ replicas: 5
 network: dufour
 version: singapore-latest
 
+service:
+  type: LoadBalancer
+
 deployment:
   env: |
     - name: RUST_LOG
