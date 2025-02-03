@@ -32,7 +32,7 @@ releases:
 - name: core-node
   namespace: core-team
   chart: hoprassociation/cluster-hoprd
-  version: 0.3.1
+  version: 0.3.4
   wait: true
   timeout: 5
   values:
