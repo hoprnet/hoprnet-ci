@@ -6,7 +6,8 @@ pull-requests:
 
 replicas: 5
 network: rotsee
-version: singapore-latest
+# testing with connectivity debug logging, this is based on 2.2.3
+version: europe-west3-docker.pkg.dev/hoprassociation/docker-images/hoprd:2.2.3-pr.6869
 
 service:
   type: LoadBalancer
@@ -46,7 +47,7 @@ config: |
           redeem_only_aggregated: true
           minimum_redeem_ticket_value: "10000000000000 HOPR" # 0.00001 wxHOPR
         - !ClosureFinalizer
-          max_closure_overdue: 3600
+          max_closure_overdue: 300
     heartbeat:
       interval: 60
       variance: 2
