@@ -37,7 +37,9 @@ config: |
   hopr:
     chain:
       network: rotsee
-      provider: https://gnosis.rpc-provider.prod.hoprnet.link
+      # This RPC endpoint is provided by the Gnosis team and dedicated to HOPR.
+      # If more capacity is needed contact the Gnosis infra team.
+      provider: https://rpc.eu-central-2.gateway.fm/v4/gnosis/non-archival/mainnet?apiKey=jblkwDDQGFuxZu6HEsii2RQmF5VWa0fx._Co2rKwrCpuoeKIi
     strategy:
       on_fail_continue: true
       allow_recursive: false
