@@ -39,6 +39,8 @@ deployment:
       memory: 2Gi
 
 config: |
+  session_ip_forwarding:
+    use_target_allow_list: false
   hopr:
     chain:
       network: dufour
