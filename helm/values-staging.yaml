@@ -14,15 +14,9 @@ service:
   type: LoadBalancer
 
 deployment:
-    # - name: RUST_LOG
-    #   value: debug,libp2p_swarm=debug,libp2p_mplex=debug,multistream_select=debug,libp2p_tcp=debug,libp2p_dns=info,sea_orm=info,sqlx=info
-  env: |
-    - name: RUST_LOG
-      value: info
-    - name: RUST_BACKTRACE
-      value: full
-    - name: HOPRD_LOG_FORMAT
-      value: json
+  # env: |
+  #   - name: RUST_LOG
+  #     value: debug,libp2p_swarm=debug,libp2p_mplex=debug,multistream_select=debug,libp2p_tcp=debug,libp2p_dns=info,sea_orm=info,sqlx=info
   resources: |
     limits:
       cpu: 2000m # allow for max 2 core usage which is quite conservative
