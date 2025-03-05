@@ -54,10 +54,6 @@ config: |
         # 5sec timeout for heartbeat pings, any more would be unusable anyway
         timeout: 5
 
-defaultHoprdEnvVars:
-  HOPRD_PROVIDER: DUMMY_DATA_OVERRIDEN_BY_REPLICATOR
-  RUST_LOG: debug
-
 identityPool:
   funding:
     enabled: true
