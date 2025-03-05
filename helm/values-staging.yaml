@@ -31,7 +31,6 @@ config: |
   hopr:
     chain:
       network: rotsee
-      provider: https://gnosis.rpc-provider.prod.hoprnet.link
     strategy:
       on_fail_continue: true
       allow_recursive: false
